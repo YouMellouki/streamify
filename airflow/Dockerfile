@@ -1,15 +1,16 @@
 # First-time build can take upto 10 mins.
 
-FROM apache/airflow:2.8.1
+FROM apache/airflow:2.2.3
 
 ENV AIRFLOW_HOME=/opt/airflow
 
 USER root
 RUN apt-get update && \
     ACCEPT_EULA=Y apt-get upgrade -y && \
-    apt-get install -y git gcc g++ -qqq
+    apt-get install -y git gcc 
 RUN pip install --upgrade pip
 #git 
+
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
