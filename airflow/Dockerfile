@@ -7,7 +7,8 @@ ENV AIRFLOW_HOME=/opt/airflow
 USER root
 RUN apt-get update && \
     ACCEPT_EULA=Y apt-get upgrade -y && \
-    apt-get install -y git
+    apt-get install -y git\
+    gcc
 RUN pip install --upgrade pip
 # git gcc g++ -qqq
 
