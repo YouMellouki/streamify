@@ -131,7 +131,7 @@ resource "google_dataproc_cluster" "mulitnode_spark_cluster" {
 
 resource "google_storage_bucket" "bucket" {
   name          = var.bucket
-  location      = var.location
+  location      = var.region
   force_destroy = true
 
 

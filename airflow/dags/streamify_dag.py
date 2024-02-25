@@ -50,7 +50,8 @@ with DAG(
 
     initate_dbt_task = BashOperator(
         task_id = 'dbt_initiate',
-        bash_command = 'cd /dbt && dbt deps --profiles-dir . --target prod'
+        bash_command = 'cd /dbt && dbt deps && dbt seed --select state_codes --profiles-dir . --target dev'
+       
     )
 
     execute_dbt_task = BashOperator(
