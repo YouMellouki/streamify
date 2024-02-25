@@ -1,12 +1,14 @@
 # Streamify
 
-A data pipeline with Kafka, Spark Streaming, dbt, Docker, Airflow, Terraform, GCP and much more!
+The data pipeline integrates multiple technologies including Kafka, Spark Streaming, dbt, Docker, Airflow, Terraform, GCP, Power BI, and Looker, among others.
 
 ## Description
 
 ### Objective
 
-The project will stream events generated from a fake music streaming service (like Spotify) and create a data pipeline that consumes the real-time data. The data coming in would be similar to an event of a user listening to a song, navigating on the website, authenticating. The data would be processed in real-time and stored to the data lake periodically (every two minutes). The hourly batch job will then consume this data, apply transformations, and create the desired tables for our dashboard to generate analytics. We will try to analyze metrics like popular songs, active users, user demographics etc.
+The project aims to establish a data pipeline for streaming events from a simulated music streaming service, akin to Spotify. This pipeline will handle real-time data ingestion, including events such as song listens, website navigation, and user authentication. The incoming data will be promptly processed and stored in a data lake at regular intervals, typically every two minutes.
+
+Subsequently, an hourly batch job will retrieve this stored data from the data lake. It will then execute various transformations on the data, culminating in the creation of structured tables suitable for analytics purposes. The ultimate goal is to analyze key metrics such as popular songs, user activity levels, and user demographics. These analytics will serve as valuable insights for understanding user behavior and optimizing the music streaming service.
 
 ### Dataset
 
@@ -50,8 +52,6 @@ If you already have a Google Cloud account and a working terraform setup, you ca
 
 ### Get Going!
 
-A video walkthrough of how I run my project - [YouTube Video](https://youtu.be/vzoYhI8KTlY)
-
 - Procure infra on GCP with Terraform - [Setup](setup/terraform.md)
 - (Extra) SSH into your VMs, Forward Ports - [Setup](setup/ssh.md)
 - Setup Kafka Compute Instance and start sending messages from Eventsim - [Setup](setup/kafka.md)
@@ -73,6 +73,3 @@ A lot can still be done :).
 - Create dimensional models for additional business processes
 - Include CI/CD
 - Add more visualizations
-
-### Special Mentions
-I'd like to thank the [DataTalks.Club](https://datatalks.club) for offering this Data Engineering course for completely free. All the things I learnt there, enabled me to come up with this project. If you want to upskill on Data Engineering technologies, please check out the [course](https://github.com/DataTalksClub/data-engineering-zoomcamp). :)

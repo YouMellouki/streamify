@@ -13,7 +13,7 @@ We will setup airflow on docker in a dedicated compute instance. dbt is setup in
 - Clone git repo
 
   ```bash
-  git clone https://github.com/ankurchavda/streamify.git && \
+  git clone https://github.com/YouMellouki/streamify.git && \
   cd streamify
   ```
 - Install anaconda, docker & docker-compose.
@@ -24,7 +24,7 @@ We will setup airflow on docker in a dedicated compute instance. dbt is setup in
   ```
 - Move the service account json file from local to the VM machine in `~/.google/credentials/` directory.  Make sure it is named as `google_credentials.json`  else the dags will fail!
 
-  - You can use [sftp](https://youtu.be/ae-CV2KfoN0?t=2442) to transfer the file.
+  - You can use [sftp] to transfer the file.
 
 - Set the evironment variables (same as Terraform values)-
 
@@ -39,7 +39,7 @@ We will setup airflow on docker in a dedicated compute instance. dbt is setup in
 
     **Note**: You will have to setup these env vars every time you create a new shell session.
 
-- Start Airflow. (This shall take a few good minutes, grab a coffee!)
+- Start Airflow. (This shall take a few good minutes)
 
   ```bash
   bash ~/streamify/scripts/airflow_startup.sh && cd ~/streamify/airflow

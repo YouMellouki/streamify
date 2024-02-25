@@ -3,7 +3,7 @@
 Clone the repository in your local machine.
 
 ```bash
-git clone https://github.com/ankurchavda/streamify.git && \
+git clone https://github.com/YouMellouki/streamify.git && \
 cd streamify/terraform
 ```
 
@@ -36,11 +36,18 @@ Spin up the Infra -
     - streamify_prod
   - Firewall rule to open port `9092` on the Kafka Instance
 
+- Check validation
+
+  ```bash
+  terraform validate
+  ```
+
 - Apply the infra. **Note** - Billing will start as soon as the apply is complete.
 
   ```bash
   terraform apply
   ```
+
 
 - Once you are done with the project. Teardown the infra using-
 
